@@ -1,14 +1,14 @@
-import style from './ListMoreDetails.module.scss'
 import { connect } from "react-redux"
 import { withRouter } from "react-router";
 import { compose } from "redux";
+import style from './ListMoreDetails.module.scss'
 
-const ListMoreDetails = (props) => {
-	let listNumberId = props.match.params.id;
+const ListMoreDetails = ({ list, match, ...props }) => {
+	let listNumberId = match.params.id;
 
 	return (
 		<div className="container">
-			<div className={style.list__item_text}>{props.list[listNumberId]}</div>
+			<div className={style.list__item_text}>{list?.[listNumberId]}</div>
 		</div>
 	)
 }

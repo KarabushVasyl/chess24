@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom'
 import style from './List.module.scss'
 
-const List = (props) => {
-	return props.items?.map((item, key) => {
+const List = ({ items, ...props }) => {
+	return items?.map((item, key) => {
 		let firstSentence = item?.split('. ', 1)
 		return <div key={key} className={style.list__item}>
 			<div className={style.list__item_text}>

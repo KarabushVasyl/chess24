@@ -2,7 +2,7 @@
 	"name": "chess24",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://depesi.github.io/chess24/",
+	"homepage": "https://karabushvasyl.github.io/chess24/",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/react": "^11.2.7",

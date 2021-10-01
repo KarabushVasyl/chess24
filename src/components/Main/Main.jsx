@@ -1,27 +1,39 @@
-import style from './Main.module.scss'
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
+import { connect } from 'react-redux'
 import { listAPI } from '../../api/api'
 import List from './List/List'
-import { connect } from 'react-redux'
-import { setList } from '../../redux/list-reducer'
+import { setList, initializeSuccess } from '../../redux/list-reducer'
+import Preloader from "../Preloader/Preloader"
+import style from './Main.module.scss'
 
-const Main = (props) => {
+
+
+const Main = ({ list, setList, initializeSuccess, initialize, ...props }) => {
 	useEffect(async () => {
-		if (props.list.length === 0) {
-			listAPI.getList()
-				.then(result => props.setList(result))
+		if (list.length === 0) {
+			await listAPI.getList()
+				.then(result => {
+					setList(result)
+				})
+			initializeSuccess()
 		}
 	}, [])
+
+	if (!initialize) {
+		return (
+			<Preloader />
+		)
+	}
 
 	return (
 		<div>
 			<div className="container">
-				<List items={props.list} />
+				<List items={list} />
 				<div className={style.controllers__container}>
 					<button className={style.reset__button}
 						onClick={() => {
 							listAPI.getList()
-								.then(result => props.setList(result))
+								.then(result => setList(result))
 						}}>More</button>
 				</div>
 			</div>
@@ -32,8 +44,9 @@ const Main = (props) => {
 
 const mapStateToProps = (state) => {
 	return {
-		list: state.mainList.list
+		list: state.mainList.list,
+		initialize: state.mainList.initialize
 	}
 }
 
-export default connect(mapStateToProps, { setList })(Main)
+export default connect(mapStateToProps, { setList, initializeSuccess })(Main)
