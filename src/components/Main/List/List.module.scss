@@ -1,0 +1,40 @@
+.list__item {
+	background: #ffffff;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	border-radius: 16px;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+.list__item_button {
+	display: flex;
+	justify-content: end;
+}
+.arrow__circle {
+	color: #6b8fff;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 18px;
+	height: 18px;
+	line-height: 18px;
+	display: inline-block;
+
+	&:hover {
+		.arrow__circle_icon {
+			transform: translate3d(5px, 0, 0);
+		}
+		.arrow__circle_iconCircle {
+			stroke-dashoffset: 0;
+		}
+	}
+}
+.arrow__circle_icon {
+	position: relative;
+	top: -1px;
+	transition: transform 0.3s ease;
+	vertical-align: middle;
+}
+.arrow__circle_iconCircle {
+	transition: stroke-dashoffset 0.3s ease;
+	stroke-dasharray: 95;
+	stroke-dashoffset: 95;
+}

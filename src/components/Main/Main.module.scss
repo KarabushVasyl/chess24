@@ -1,0 +1,23 @@
+.controllers__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.reset__button {
+	padding: 6px 8px;
+	outline: none;
+	background-color: #6b8fff;
+	border: 2px solid #6b8fff;
+	color: #fff;
+	font-size: 15px;
+	transition: all 0.3s;
+	border-radius: 18px;
+	cursor: pointer;
+	margin-bottom: 20px;
+
+	&:hover {
+		color: #6b8fff;
+		background-color: #fff;
+	}
+}
