@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/chess24/static/css/main.6a22575b.chunk.css",
+    "main.js": "/chess24/static/js/main.16fe4640.chunk.js",
+    "main.js.map": "/chess24/static/js/main.16fe4640.chunk.js.map",
+    "runtime-main.js": "/chess24/static/js/runtime-main.069feea9.js",
+    "runtime-main.js.map": "/chess24/static/js/runtime-main.069feea9.js.map",
+    "static/js/2.da935693.chunk.js": "/chess24/static/js/2.da935693.chunk.js",
+    "static/js/2.da935693.chunk.js.map": "/chess24/static/js/2.da935693.chunk.js.map",
+    "static/js/3.4fe39812.chunk.js": "/chess24/static/js/3.4fe39812.chunk.js",
+    "static/js/3.4fe39812.chunk.js.map": "/chess24/static/js/3.4fe39812.chunk.js.map",
+    "index.html": "/chess24/index.html",
+    "static/css/main.6a22575b.chunk.css.map": "/chess24/static/css/main.6a22575b.chunk.css.map",
+    "static/js/2.da935693.chunk.js.LICENSE.txt": "/chess24/static/js/2.da935693.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.069feea9.js",
+    "static/js/2.da935693.chunk.js",
+    "static/css/main.6a22575b.chunk.css",
+    "static/js/main.16fe4640.chunk.js"
+  ]
+}
